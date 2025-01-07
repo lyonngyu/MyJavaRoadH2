@@ -1,0 +1,402 @@
+.none {
+    visibility: hidden;
+}
+/* article-move */
+    .article-move {
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .all-box > div.what-box {
+        display: flex;
+        justify-content: center;
+        column-gap: 50px;
+    }
+    .all-box {
+        padding-bottom: 50px;
+    }
+    /* left-box */
+        .left-box {
+            font-weight: 700;
+            display: flex;
+            flex-direction: column;
+            row-gap: 15px;
+            font-family: 'colbel';
+        }
+        .main-image > img{
+            width: 455px;
+            height: 455px;
+            box-shadow: 3px 3px 5px 1px lightgray;
+        }
+        .back-to-disco > a {
+            color: black;
+            font-size: 11pt;
+        }
+        .left-one {
+            font-size: 12pt;
+            letter-spacing: 1px;
+        }
+        .left-two {
+            font-size: 11pt;
+            letter-spacing: 1px;
+            line-height: 25px;
+        }
+
+    /* right-box */
+        
+        .right-box {
+            width: 600px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        .name-box {
+            font-size: 14pt;
+            font-weight: 700;
+            margin-top: 170px;
+        }
+        .title-box {
+            margin-top: 0;
+            margin-bottom: 50px;
+        }
+        .text-box > .in-text > div > .one {
+            font-size: 11pt;
+            line-height: 30px;
+            font-weight: 700;
+        }
+        .text-box > .in-text > div > .two {
+            font-size: 9pt;
+        }
+        .lang {
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: flex;
+        }
+        ul.lang {
+            margin: 0;
+        }
+        .lang li {
+            font-size: 11pt;
+        }
+        .lang > li {
+            margin: 0 10px;
+            color: #BBBBBB;
+        }
+        .lang > label > li {
+            cursor: pointer;
+            font-weight: 700;
+            color: #BBBBBB;
+        }
+        .lang-but {
+            display: none;
+        }
+        .right-box:has(#KO[type="radio"]:checked) > ul.lang > label > .ko_b {
+            color: black;
+        }
+        .right-box:has(#EN[type="radio"]:checked) > ul.lang > label > .en_b {
+            color: black;
+        }
+        .right-box:has(#JP[type="radio"]:checked) > ul.lang > label > .jp_b {
+            color: black;
+        }
+        .right-box:has(#CH[type="radio"]:checked) > ul.lang > label > .ch_b {
+            color: black;
+        }
+        .all-lang {
+            position: absolute;
+            opacity: 0;
+        }
+        .all-lang-content {
+            position: relative;
+        }
+        .lang-but[type="radio"]:checked + div {
+            opacity: 1 !important;
+        }
+        .in-text {
+            line-height: 30px;
+        }
+        .one, .two {
+            padding-bottom: 50px;
+        }
+        .more-box > span {
+            padding-right: 10px;
+        }
+        .more-box > label > span {
+            cursor: pointer;
+            font-weight: 700;
+            color: #BBBBBB;
+            letter-spacing: 1px;
+        }
+
+        #more-ko, #more-en, #more-jp, #more-ch {
+            display: none;
+        }
+        .more, .more-last {
+            display: none;
+        }
+
+        .KO {
+            z-index: 1;
+        }
+        #KO[type="radio"]:checked + .KO {
+            z-index: 3 !important;
+        }
+        .KO > .ko-two:has(#more-ko[type="checkbox"]:checked) > span.ko-more, .KO > .ko-two:has(#more-ko[type="checkbox"]:checked) > .ko-more-last{
+            display: inline-block !important;
+        }
+        .KO > .ko-two:has(#more-ko[type="checkbox"]:checked) > .ko-more-box {
+            display: none;
+        }
+        .in-text:has(#more-ko[type="checkbox"]:checked).in-text:has(#KO[type="radio"]:checked).ten {
+            height: 2470px !important;
+        }
+        .in-text:has(#KO[type="radio"]:checked).ten {
+            height: 1660px;
+        }
+
+        .EN {
+            z-index: 1;
+        }
+        #EN[type="radio"]:checked + .EN {
+            z-index: 3 !important;
+        }
+        .EN > .en-two:has(#more-en[type="checkbox"]:checked) > span.en-more, .EN > .en-two:has(#more-en[type="checkbox"]:checked) > .en-more-last{
+            display: inline-block !important;
+        }
+        .EN > .en-two:has(#more-en[type="checkbox"]:checked) > .en-more-box {
+            display: none;
+        }
+        .in-text:has(#more-en[type="checkbox"]:checked).in-text:has(#EN[type="radio"]:checked).ten {
+            height: 2550px !important;
+        }
+        .in-text:has(#EN[type="radio"]:checked).ten {
+            height: 1690px;
+        }
+
+        .JP {
+            z-index: 1;
+            font-family: 'BIZ UDPGothic';
+        }
+        .jp-one {
+            font-size: 10pt !important;
+        }
+        #JP[type="radio"]:checked + .JP {
+            z-index: 3 !important;
+        }
+        .JP > .jp-two:has(#more-jp[type="checkbox"]:checked) > span.jp-more, .JP > .jp-two:has(#more-jp[type="checkbox"]:checked) > .jp-more-last{
+            display: inline-block !important;
+        }
+        .JP > .jp-two:has(#more-jp[type="checkbox"]:checked) > .jp-more-box {
+            display: none;
+        }
+        .in-text:has(#more-jp[type="checkbox"]:checked).in-text:has(#JP[type="radio"]:checked).ten {
+            height: 2320px !important;
+        }
+        .in-text:has(#JP[type="radio"]:checked).ten {
+            height: 1630px;
+        }
+
+        .CH {
+            z-index: 1;
+            font-family: 'Microsoft Yahei UI';
+        }
+        #CH[type="radio"]:checked + .CH {
+            z-index: 3 !important;
+        }
+        .CH > .ch-two:has(#more-ch[type="checkbox"]:checked) > span.ch-more, .CH > .ch-two:has(#more-ch[type="checkbox"]:checked) > .ch-more-last{
+            display: inline-block !important;
+        }
+        .CH > .ch-two:has(#more-ch[type="checkbox"]:checked) > .ch-more-box {
+            display: none;
+        }
+        .in-text:has(#more-ch[type="checkbox"]:checked).in-text:has(#CH[type="radio"]:checked).ten {
+            height: 2070px !important;
+        }
+        .in-text:has(#CH[type="radio"]:checked).ten {
+            height: 1590px;
+        }
+
+        .track-list {
+            font-weight: 700;
+        }
+        .track-list > .track-title {
+            margin-bottom: 20px;
+        }
+        .track-list > .in-track {
+            line-height: 30px;
+            font-size: 9pt;
+        }
+
+        /* box */
+        .box {
+            margin-top: 50px !important;
+            margin: 0 auto;
+            padding-bottom: 50px;
+            position: relative;
+        }
+        .min-title {
+            font-weight: 700;
+            font-size: 11pt;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+        /* ep-box */
+        .ep-box-content {
+            display: flex;
+            column-gap: 14px;
+            margin: 0;
+        }
+        .ep-box-content > li > a > .img-box  img {
+            width: 264px;
+            height: 264px;
+        }
+        .ep-box-content > li > a > .img-box > .out-img-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            z-index: 3;
+            top: 0;
+            left: 0;
+            background-color: black;
+            opacity: 0;
+            height: 264px;
+            width: 264px;
+            transition-duration: 0.3s;
+            font-family: 'colbel';
+            font-weight: 700;
+        }
+        .ep-box-content > li > a > .img-box > .out-img-box:hover {
+            opacity: 0.9;
+            transition-duration: 0.3s;
+        }
+        .img-box {
+            position: relative;
+        }
+        .out-one {
+            font-size: 11pt;
+            color: white;
+        }
+        .out-two {
+           font-size: 13pt;
+           color: white;
+        }
+        .ep-more {
+            color: black;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        /* page */
+        .nine {
+            height: 310px !important;
+        }
+        .eight {
+            height: 1150px !important;
+        }
+        .seven {
+            height: 220px !important;
+        }
+
+        .in-text:has(#more-ko[type="checkbox"]:checked).in-text:has(#KO[type="radio"]:checked).six {
+            height: 1890px !important;
+        }
+        .in-text:has(#KO[type="radio"]:checked).six {
+            height: 1410px;
+        }
+        .in-text:has(#more-en[type="checkbox"]:checked).in-text:has(#EN[type="radio"]:checked).six {
+            height: 2290px !important;
+        }
+        .in-text:has(#EN[type="radio"]:checked).six {
+            height: 1420px;
+        }
+        .in-text:has(#more-jp[type="checkbox"]:checked).in-text:has(#JP[type="radio"]:checked).six {
+            height: 1960px !important;
+        }
+        .in-text:has(#JP[type="radio"]:checked).six {
+            height: 1390px;
+        }
+        .in-text:has(#more-ch[type="checkbox"]:checked).in-text:has(#CH[type="radio"]:checked).six {
+            height: 1710px !important;
+        }
+        .in-text:has(#CH[type="radio"]:checked).six {
+            height: 1390px;
+        }
+
+        .five {
+            height: 210px;
+        }
+
+        .in-text:has(#KO[type="radio"]:checked).four {
+            height: 700px;
+        }
+        .in-text:has(#EN[type="radio"]:checked).four {
+            height: 820px;
+        }
+        .in-text:has(#JP[type="radio"]:checked).four {
+            height: 780px;
+        }
+        .in-text:has(#CH[type="radio"]:checked).four {
+            height: 660px;
+        }
+
+        .in-text:has(#more-ko[type="checkbox"]:checked).in-text:has(#KO[type="radio"]:checked).three {
+            height: 1360px !important;
+        }
+        .in-text:has(#KO[type="radio"]:checked).three {
+            height: 1330px;
+        }
+        .in-text:has(#more-en[type="checkbox"]:checked).in-text:has(#EN[type="radio"]:checked).three {
+            height: 1800px !important;
+        }
+        .in-text:has(#EN[type="radio"]:checked).three {
+            height: 1450px;
+        }
+        .in-text:has(#more-jp[type="checkbox"]:checked).in-text:has(#JP[type="radio"]:checked).three {
+            height: 1620px !important;
+        }
+        .in-text:has(#JP[type="radio"]:checked).three {
+            height: 1600px;
+        }
+        .in-text:has(#more-ch[type="checkbox"]:checked).in-text:has(#CH[type="radio"]:checked).three {
+            height: 1200px !important;
+        }
+        .in-text:has(#CH[type="radio"]:checked).three {
+            height: 1200px;
+        }
+
+        .in-text:has(#more-ko[type="checkbox"]:checked).in-text:has(#KO[type="radio"]:checked).two {
+            height: 740px !important;
+        }
+        .in-text:has(#KO[type="radio"]:checked).two {
+            height: 550px;
+        }
+        
+        .in-text:has(#more-ko[type="checkbox"]:checked).in-text:has(#KO[type="radio"]:checked).one {
+            height: 1130px !important;
+        }
+        .in-text:has(#KO[type="radio"]:checked).one {
+            height: 970px;
+        }
+        .in-text:has(#more-en[type="checkbox"]:checked).in-text:has(#EN[type="radio"]:checked).one {
+            height: 1160px !important;
+        }
+        .in-text:has(#EN[type="radio"]:checked).one {
+            height: 890px;
+        }
+        .in-text:has(#more-jp[type="checkbox"]:checked).in-text:has(#JP[type="radio"]:checked).one {
+            height: 1310px !important;
+        }
+        .in-text:has(#JP[type="radio"]:checked).one {
+            height: 1130px;
+        }
+        .in-text:has(#more-ch[type="checkbox"]:checked).in-text:has(#CH[type="radio"]:checked).one {
+            height: 1000px !important;
+        }
+        .in-text:has(#CH[type="radio"]:checked).one {
+            height: 1000px;
+        }
